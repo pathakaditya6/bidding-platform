@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  
+  <div id="login-section">
+    <h2>Login as</h2>
+    <button onclick="loginAs('seller')">Seller</button>
+    <button onclick="loginAs('bidder')">Bidder</button>
+  </div>
+
+  <!-- Seller Section -->
+  <div id="seller-section" class="hidden">
+    <h2>Seller Dashboard</h2>
+    <h3>List a New Auction Item</h3>
+    <form id="auction-form">
+      <input type="text" id="item-name" placeholder="Item Name" required>
+      <input type="text" id="item-description" placeholder="Item Description" required>
+      <input type="number" id="item-price" placeholder="Starting Price" required>
+      <button type="submit">Create Auction</button>
+    </form>
+    <h3>Your Auctions</h3>
+    <div id="seller-auctions"></div>
+  </div>
+
+  <!-- Bidder Section -->
+  <div id="bidder-section" class="hidden">
+    <h2>Bidder Dashboard</h2>
+    <h3>Active Auctions</h3>
+    <div id="active-auctions"></div>
+    <h3>Your Bid History</h3>
+    <div id="bid-history"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
